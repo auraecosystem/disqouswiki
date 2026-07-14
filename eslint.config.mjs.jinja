@@ -1,0 +1,26 @@
+// eslint.config.mjs.jinja
+
+import js from "@eslint/js";
+
+export default [
+  js.configs.recommended,
+
+  {
+    files: ["**/*.{{ extension | default('js') }}"],
+
+    languageOptions: {
+      ecmaVersion: {{ ecma_version | default(2025) }},
+      sourceType: "{{ source_type | default('module') }}"
+    },
+
+    rules: {
+      {% if use_typescript %}
+      "no-unused-vars": "off",
+      {% else %}
+      "no-unused-vars": "warn",
+      {% endif %}
+
+      "no-console": "{{ no_console | default('off') }}"
+    }
+  }
+];
