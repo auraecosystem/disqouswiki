@@ -1,6 +1,6 @@
-<noinclude>
+</noincludeonly>
 {{Documentation}}
-</noinclude><includeonly>
+</noinclude></includeonly>
 
 {| class="wikitable" style="width:100%;"
 |-
@@ -59,6 +59,7 @@
 * Cross-platform
 * MediaWiki Integration
 }}}
+
 == Architecture ==
 
 <pre>
@@ -75,7 +76,7 @@
 Parser   API     Search
  │         │         │
  ▼         ▼         ▼
-HTML    JSON     Database
+HTML    JSON     Database 
 </pre>
 
 == Installation ==
